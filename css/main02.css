@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+/* 공통영역 */
+.inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    /* background-color: rgb(255, 223, 223); */
+}
+section {
+    padding: 100px 0;
+}
+section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+/* 전체레이아웃 */
+/* 상단 */
+.header {
+    background-color: #fff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+.header-top {
+    width: 100%;
+}
+.util {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px;
+}
+.util a:hover {
+    text-decoration: underline;
+}
+.header-bt {
+    display: flex;
+    justify-content: space-between;
+}
+.gnb {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+.gnb li {
+    width: calc(100% / 5);
+    text-align: center;
+}
+.gnb li a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.gnb li:hover a {
+    background-color: #333;
+    color: #fff;
+}
+/* 비주얼 */
+figure {
+    position: relative;
+    width: 100%;
+    height: 1100px;
+
+    background-color: #333;
+}
+/* video */
+figure video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0.3;
+}
+/* 비디오 내용 */
+.video-txt {
+    position: relative;
+    padding-top: 17%;
+    color: #fff;
+}
+.video-txt h2 {
+    font-size: 120px;
+}
+.video-txt p {
+    width: 50%;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.video-txt a {
+    display: block;
+    width: 300px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+}
+/* news */
+.news {
+    background-color: rgb(216, 223, 229);
+}
+.news-wrap,
+.work-wrap {
+    display: flex;
+    gap: 20px;
+}
+.news-wrap li,
+.work-wrap li {
+    position: relative;
+    width: calc(100% / 4);
+    padding: 10px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+.pic {
+    position: relative;
+    width: 100%;
+    height: 178px;
+    overflow: hidden;
+}
+.pic img {
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+}
+.pic:hover img {
+    transform: scale(1.1);
+}
+.news-wrap h3 {
+    line-height: 2;
+}
+.news-wrap p {
+    color: #888;
+    line-height: 1;
+}
+/* 작품 */
+.work-wrap img {
+    width: 100%;
+    display: block;
+}
+.work-wrap li {
+    background-color: #333;
+    color: #fff;
+}
+.badge {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 20px;
+}
+.play {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 60px;
+    color: #333;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+}
+.overay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+.work-wrap .pic:hover .overay {
+    opacity: 1;
+}
+.content {
+    padding: 10px;
+}
+.content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f00;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 15px;
+}
+/* 스킬 */
+.skills {
+    background-color: aliceblue;
+}
+.skill-content {
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: bisque;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.title i {
+    font-size: 30px;
+}
+.skills h2 {
+    margin-bottom: 0;
+}
+.bar {
+    width: 100%;
+    height: 20px;
+    background-color: #444;
+    border-radius: 20px;
+    overflow: hidden;
+}
+/* 움직이는 막대 */
+.fill {
+    height: 100%;
+    background-color: #f00;
+    width: 0%;
+    /* animation : 사용할 애니메이션이름 실행시간 끝난후 마지막 상태유지 */
+    animation: fillAni 2s forwards;
+    border-radius: 20px;
+}
+/* 각각 길이 */
+.html {
+    max-width: 90%;
+    background-color: aquamarine;
+}
+.css {
+    max-width: 80%;
+    background-color: rgb(255, 242, 127);
+}
+.js {
+    max-width: 70%;
+    background-color: rgb(240, 127, 255);
+}
+/* 애니메이션 */
+@keyframes fillAni {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+/* 하단 */
+.footer {
+    padding: 80px 0;
+    background-color: #333;
+    color: #c8c8c8;
+}
+.upper {
+    display: flex;
+    gap: 20px;
+    border-bottom:;
+}
+.upper a {
+    color: #c8c8c8;
+}
+.ft-logo {
+    font-size: 24px;
+    color: #e7e7e7;
+    font-weight: bold;
+}
+.upper ul {
+    display: flex;
+    gap: 20px;
+}
+/* lower */
+.lower {
+    margin-top: 20px;
+    color: #999;
+    font-size: 12px;
+}
+address {
+    font-style: normal;
+}
+.lower p{
+    line-height: 2.5;
+}
